@@ -422,8 +422,8 @@ int BN_nist_mod_192(BIGNUM *r, const BIGNUM *a, const BIGNUM *field,
         carry = (int)bn_add_words(r_d, r_d, t_d, BN_NIST_192_TOP);
         nist_set_192(t_d, buf.bn, 4, 4, 0);
         carry += (int)bn_add_words(r_d, r_d, t_d, BN_NIST_192_TOP);
-        nist_set_192(t_d, buf.bn, 5, 5, 5)
-            carry += (int)bn_add_words(r_d, r_d, t_d, BN_NIST_192_TOP);
+        nist_set_192(t_d, buf.bn, 5, 5, 5);
+        carry += (int)bn_add_words(r_d, r_d, t_d, BN_NIST_192_TOP);
     }
 #endif
     if (carry > 0)
